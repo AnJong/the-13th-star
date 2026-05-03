@@ -21,6 +21,7 @@
       defer
     ></script>
     <script src="data.js" defer></script>
+    <script src="animations.js" defer></script>
 
     <style>
       /* ==== 리셋 ==== */
@@ -264,6 +265,17 @@
         color: var(--accent);
       }
 
+      /* 텍스트 애니메이션 단어 wrapper */
+      .fx-w {
+        display: inline-block;
+        will-change: opacity, transform, filter;
+      }
+
+      strong {
+        display: inline-block;
+        will-change: transform, opacity;
+      }
+
       /* 푸터 */
       .end {
         text-align: center;
@@ -383,6 +395,11 @@
 
         window.addEventListener("scroll", updateProgress, { passive: true });
         updateProgress();
+
+        // 애니메이션 초기화 (모든 비트가 DOM에 추가된 후)
+        if (window.STORY_ANIMATIONS && typeof window.STORY_ANIMATIONS.init === "function") {
+          window.STORY_ANIMATIONS.init();
+        }
       });
     </script>
   </body>
