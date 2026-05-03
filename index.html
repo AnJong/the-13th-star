@@ -271,9 +271,58 @@
         will-change: opacity, transform, filter;
       }
 
+      /* 키워드별 변조 */
+      .fx-w.kw-name {
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .fx-w.kw-number {
+        font-weight: 700;
+        color: var(--family);
+        font-variant-numeric: tabular-nums;
+      }
+      .fx-w.kw-truth {
+        font-weight: 700;
+        color: #ffe6a7;
+        text-shadow: 0 0 12px rgba(245, 217, 156, 0.4);
+        letter-spacing: 0.02em;
+      }
+      .fx-w.kw-emotion {
+        font-weight: 700;
+        font-style: italic;
+        color: #ffb8b0;
+      }
+
+      /* 가족 컬럼 안에서는 인물명 색을 가족 톤으로 */
+      .col-family .fx-w.kw-name {
+        color: var(--family);
+      }
+
+      /* 추적팀 콘솔에서는 모든 키워드를 모노톤 청록으로 */
+      .col-team .fx-w.kw-name,
+      .col-team .fx-w.kw-truth,
+      .col-team .fx-w.kw-number {
+        color: var(--accent);
+        text-shadow: none;
+      }
+
       strong {
         display: inline-block;
-        will-change: transform, opacity;
+        will-change: transform, opacity, letter-spacing;
+        color: #fff;
+        text-shadow: 0 0 16px rgba(168, 212, 245, 0.5);
+      }
+
+      /* 가족 컬럼에서 strong */
+      .col-family strong {
+        color: #fff5d8;
+        text-shadow: 0 0 18px rgba(245, 217, 156, 0.6);
+      }
+
+      /* 추적팀 콘솔에서 strong */
+      .col-team strong {
+        color: var(--accent);
+        text-shadow: 0 0 10px rgba(168, 212, 245, 0.7);
       }
 
       /* 푸터 */
