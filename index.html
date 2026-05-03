@@ -402,9 +402,9 @@
         }
       }
 
-            /* ==== 일러스트 (비트 클로징 이미지) ==== */
+            /* ==== 일러스트 (가족 사건 직후 마침표) ==== */
       .beat-illustration {
-        margin: 3rem calc(-1 * var(--pad)) 0;
+        margin: 2rem calc(-1 * var(--pad)) 2.5rem;
         border-radius: 0;
         overflow: hidden;
         position: relative;
@@ -602,17 +602,18 @@
                </figure>`
             : "";
 
-          // 일러스트는 본문 뒤(비트 끝)에 — 영화의 *클로징 이미지*로
-          // 본문 읽기 전 시각적 스포일러 방지
+          // 일러스트는 가족 컬럼 직후 — *사건이 벌어진 직후*의 위치
+          // 가족 시점 사건이 끝나고 → 일러스트로 시각적 마침표 →
+          // 외계인·추적팀이 같은 사건을 다른 시점에서 해석
           section.innerHTML = `
             <header class="beat-header">
               <div class="beat-num">Beat ${beat.id}</div>
               <h2 class="beat-title">${beat.title}</h2>
             </header>
             ${renderColumn("가족", beat.family, "col-family", beat.id)}
+            ${illustrationHtml}
             ${renderColumn("외계인", beat.alien, "col-alien", beat.id)}
             ${renderColumn("추적팀", beat.team, "col-team", beat.id)}
-            ${illustrationHtml}
           `;
 
           story.appendChild(section);
