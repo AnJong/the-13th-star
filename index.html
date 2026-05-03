@@ -28,16 +28,21 @@
       defer
     ></script>
 
-    <!-- data.js, animations.js는 매 배포마다 갱신되므로 cache-busting -->
+    <!--
+      data.js, animations.js cache-busting.
+      document.write를 쓰는 이유: 동적 createElement로 추가한 script는
+      defer 속성이 무시되어 DOMContentLoaded 이전 보장이 깨진다.
+      document.write는 parser-blocked라 defer가 정상 동작 → 메인 핸들러
+      실행 시점에 NOVEL_DATA가 확실히 로드되어 있다.
+      (페이지 첫 로드 시에만 호출되므로 안티패턴 경고는 발생하지 않음.)
+    -->
     <script>
       (function () {
-        const v = Date.now();
-        ["data.js", "animations.js"].forEach(function (src) {
-          const s = document.createElement("script");
-          s.src = src + "?v=" + v;
-          s.defer = true;
-          document.head.appendChild(s);
-        });
+        var v = Date.now();
+        document.write(
+          '<script src="data.js?v=' + v + '" defer><\/script>' +
+          '<script src="animations.js?v=' + v + '" defer><\/script>'
+        );
       })();
     </script>
 
