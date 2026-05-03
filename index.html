@@ -330,6 +330,45 @@
         }
       }
 
+            /* ==== 일러스트 ==== */
+      .beat-illustration {
+        margin: 0 calc(-1 * var(--pad)) 2rem;
+        border-radius: 0;
+        overflow: hidden;
+        position: relative;
+      }
+      .beat-illustration img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: cover;
+      }
+      .beat-illustration figcaption {
+        font-size: 0.78rem;
+        color: var(--fg-dim);
+        text-align: center;
+        padding: 0.5rem var(--pad);
+        font-style: italic;
+      }
+      .beat-illustration::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 60%,
+          rgba(10, 10, 13, 0.4) 100%
+        );
+        pointer-events: none;
+      }
+      @media (min-width: 768px) {
+        .beat-illustration {
+          margin: 0 0 2rem;
+          border-radius: 0.5rem;
+        }
+      }
+
       /* ==== 비트 카운터 (우측 상단) ==== */
       .beat-counter {
         position: fixed;
@@ -484,11 +523,19 @@
           section.id = `beat-${beat.id}`;
           section.dataset.beatId = beat.id;
 
+          const illustrationHtml = beat.illustration
+            ? `<figure class="beat-illustration">
+                 <img src="${beat.illustration.src}" alt="${beat.illustration.alt || ""}" loading="lazy" />
+                 ${beat.illustration.caption ? `<figcaption>${beat.illustration.caption}</figcaption>` : ""}
+               </figure>`
+            : "";
+
           section.innerHTML = `
             <header class="beat-header">
               <div class="beat-num">Beat ${beat.id}</div>
               <h2 class="beat-title">${beat.title}</h2>
             </header>
+            ${illustrationHtml}
             ${renderColumn("가족", beat.family, "col-family", beat.id)}
             ${renderColumn("외계인", beat.alien, "col-alien", beat.id)}
             ${renderColumn("추적팀", beat.team, "col-team", beat.id)}
