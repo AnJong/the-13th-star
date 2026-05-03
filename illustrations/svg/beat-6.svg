@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Beat 6 — 별이의 외피 안 광합성 빛 알갱이가 흐른다">
+  <defs>
+    <radialGradient id="b6-bg" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#1a1f25"/>
+      <stop offset="1" stop-color="#0a0a0d"/>
+    </radialGradient>
+    <radialGradient id="b6-skin" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0" stop-color="#9bc0d4" stop-opacity="0.85"/>
+      <stop offset="0.7" stop-color="#7ba0b8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#0a0a0d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b6-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe6a7" stop-opacity="0.4"/>
+      <stop offset="0.5" stop-color="#a8d4f5" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#a8d4f5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="b6-blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#b6-bg)"/>
+
+  <!-- soft warm afternoon light from upper-right -->
+  <ellipse cx="600" cy="120" rx="350" ry="200" fill="#f5d99c" opacity="0.06"/>
+  <ellipse cx="650" cy="100" rx="200" ry="130" fill="#ffe6a7" opacity="0.08"/>
+
+  <!-- outer glow halo -->
+  <ellipse cx="400" cy="225" rx="240" ry="180" fill="url(#b6-glow)"/>
+
+  <!-- alien body (huddled, slim torso) -->
+  <g>
+    <!-- torso ellipse -->
+    <ellipse cx="400" cy="240" rx="95" ry="110" fill="url(#b6-skin)"/>
+    <!-- head -->
+    <ellipse cx="400" cy="160" rx="55" ry="50" fill="url(#b6-skin)"/>
+
+    <!-- two large eyes -->
+    <ellipse cx="380" cy="155" rx="14" ry="10" fill="#0a0a0d"/>
+    <ellipse cx="420" cy="155" rx="14" ry="10" fill="#0a0a0d"/>
+    <circle cx="378" cy="153" r="2" fill="#a8d4f5" opacity="0.6"/>
+    <circle cx="418" cy="153" r="2" fill="#a8d4f5" opacity="0.6"/>
+
+    <!-- respiratory slit -->
+    <line x1="394" y1="180" x2="406" y2="180" stroke="#0a0a0d" stroke-width="1" opacity="0.6"/>
+
+    <!-- branch-like fingers, faded at tips (mist) -->
+    <g stroke="#9bc0d4" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7">
+      <!-- right hand -->
+      <path d="M 470 250 Q 490 250 500 240"/>
+      <path d="M 470 260 Q 495 265 510 260"/>
+      <path d="M 470 270 Q 490 275 500 280"/>
+      <path d="M 470 280 Q 488 290 495 295"/>
+      <!-- left hand -->
+      <path d="M 330 250 Q 310 250 300 240"/>
+      <path d="M 330 260 Q 305 265 290 260"/>
+      <path d="M 330 270 Q 310 275 300 280"/>
+      <path d="M 330 280 Q 312 290 305 295"/>
+    </g>
+    <!-- finger-tip mist (small fading dots) -->
+    <g fill="#a8d4f5" opacity="0.4">
+      <circle cx="500" cy="240" r="1.5"/>
+      <circle cx="510" cy="260" r="1.5"/>
+      <circle cx="500" cy="280" r="1.2"/>
+      <circle cx="495" cy="295" r="1"/>
+      <circle cx="300" cy="240" r="1.5"/>
+      <circle cx="290" cy="260" r="1.5"/>
+      <circle cx="300" cy="280" r="1.2"/>
+      <circle cx="305" cy="295" r="1"/>
+    </g>
+
+    <!-- INTERNAL LIGHT PARTICLES (key visual signature) -->
+    <g fill="#ffe6a7">
+      <!-- head particles -->
+      <circle cx="385" cy="140" r="1.2" opacity="0.9"/>
+      <circle cx="402" cy="135" r="1" opacity="0.8"/>
+      <circle cx="418" cy="142" r="1.3" opacity="0.85"/>
+      <circle cx="395" cy="170" r="1.1" opacity="0.75"/>
+      <circle cx="410" cy="172" r="0.9" opacity="0.7"/>
+      <!-- torso particles (more, denser) -->
+      <circle cx="380" cy="200" r="1.4" opacity="0.85"/>
+      <circle cx="405" cy="208" r="1.6" opacity="0.95"/>
+      <circle cx="425" cy="215" r="1.2" opacity="0.8"/>
+      <circle cx="370" cy="225" r="1.3" opacity="0.8"/>
+      <circle cx="395" cy="232" r="1.5" opacity="0.9"/>
+      <circle cx="420" cy="240" r="1.4" opacity="0.85"/>
+      <circle cx="378" cy="252" r="1.1" opacity="0.75"/>
+      <circle cx="402" cy="260" r="1.6" opacity="0.95"/>
+      <circle cx="428" cy="265" r="1.2" opacity="0.8"/>
+      <circle cx="385" cy="278" r="1.3" opacity="0.8"/>
+      <circle cx="408" cy="285" r="1.4" opacity="0.85"/>
+      <circle cx="395" cy="305" r="1.5" opacity="0.9"/>
+      <circle cx="412" cy="318" r="1.1" opacity="0.7"/>
+      <circle cx="380" cy="325" r="1.2" opacity="0.75"/>
+    </g>
+
+    <!-- injury fissure (small light leak) -->
+    <g>
+      <line x1="445" y1="240" x2="455" y2="265" stroke="#ffe6a7" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="450" cy="252" r="3" fill="#ffe6a7" opacity="0.3" filter="url(#b6-blur)"/>
+    </g>
+  </g>
+
+  <!-- girl's outstretched hand (lower-left, as if reaching) -->
+  <g fill="#0a0a0d" opacity="0.7">
+    <ellipse cx="180" cy="370" rx="20" ry="8" transform="rotate(-15 180 370)"/>
+  </g>
+
+  <!-- boy's silhouette in doorway (right edge, half-cut) -->
+  <g fill="#0a0a0d" opacity="0.6">
+    <rect x="740" y="200" width="60" height="250"/>
+    <ellipse cx="730" cy="220" rx="14" ry="20"/>
+  </g>
+</svg>

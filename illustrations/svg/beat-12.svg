@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Beat 12 — 별이가 베가를 가리키고 그 별이 잠깐 흐려진다">
+  <defs>
+    <linearGradient id="b12-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d0e1a"/>
+      <stop offset="0.6" stop-color="#1a1f2e"/>
+      <stop offset="1" stop-color="#0a0a0d"/>
+    </linearGradient>
+    <radialGradient id="b12-vega" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="0.3" stop-color="#a8d4f5" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#a8d4f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b12-vega-dim" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#a8d4f5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="b12-soft">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#b12-sky)"/>
+
+  <!-- many distant stars -->
+  <g fill="#e8e6e1">
+    <circle cx="50" cy="30" r="0.7" opacity="0.6"/>
+    <circle cx="120" cy="80" r="0.5" opacity="0.4"/>
+    <circle cx="180" cy="40" r="0.8" opacity="0.7"/>
+    <circle cx="240" cy="100" r="0.6" opacity="0.5"/>
+    <circle cx="320" cy="60" r="0.7" opacity="0.6"/>
+    <circle cx="380" cy="30" r="0.5" opacity="0.4"/>
+    <circle cx="450" cy="80" r="0.9" opacity="0.7"/>
+    <circle cx="510" cy="50" r="0.6" opacity="0.5"/>
+    <circle cx="580" cy="90" r="0.7" opacity="0.6"/>
+    <circle cx="650" cy="30" r="0.5" opacity="0.4"/>
+    <circle cx="720" cy="60" r="0.8" opacity="0.7"/>
+    <circle cx="100" cy="160" r="0.6" opacity="0.5"/>
+    <circle cx="220" cy="180" r="0.5" opacity="0.4"/>
+    <circle cx="380" cy="150" r="0.7" opacity="0.6"/>
+    <circle cx="540" cy="170" r="0.6" opacity="0.5"/>
+    <circle cx="690" cy="190" r="0.5" opacity="0.4"/>
+    <circle cx="160" cy="240" r="0.4" opacity="0.3"/>
+    <circle cx="320" cy="220" r="0.5" opacity="0.4"/>
+    <circle cx="470" cy="240" r="0.6" opacity="0.5"/>
+    <circle cx="620" cy="220" r="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- VEGA — pointed at, dimming -->
+  <g>
+    <!-- normal halo (faded) -->
+    <circle cx="400" cy="80" r="20" fill="url(#b12-vega-dim)" filter="url(#b12-soft)"/>
+    <!-- core star slightly dim -->
+    <circle cx="400" cy="80" r="3" fill="#a8d4f5" opacity="0.5"/>
+    <circle cx="400" cy="80" r="1.5" fill="#fff" opacity="0.7"/>
+    <!-- subtle dimming ring -->
+    <circle cx="400" cy="80" r="14" fill="none" stroke="#a8d4f5" stroke-width="0.4" opacity="0.3"/>
+  </g>
+
+  <!-- ground (garden) -->
+  <rect x="0" y="370" width="800" height="80" fill="#0a0a0d"/>
+
+  <!-- 평상 (low platform) -->
+  <rect x="200" y="365" width="400" height="12" fill="#3a2c20"/>
+
+  <!-- telescope (silhouette, on tripod) -->
+  <g fill="#0a0a0d" stroke="#3a3a40" stroke-width="0.5">
+    <!-- tripod legs -->
+    <line x1="600" y1="365" x2="585" y2="305" stroke="#3a3a40" stroke-width="2"/>
+    <line x1="600" y1="365" x2="615" y2="305" stroke="#3a3a40" stroke-width="2"/>
+    <line x1="600" y1="365" x2="600" y2="305" stroke="#3a3a40" stroke-width="2"/>
+    <!-- mount + tube -->
+    <circle cx="600" cy="295" r="6" fill="#1a1a20"/>
+    <rect x="565" y="270" width="80" height="18" rx="9" fill="#1a1a20" transform="rotate(-15 605 279)"/>
+  </g>
+
+  <!-- alien on platform (small, glowing yellow) -->
+  <g>
+    <!-- soft yellow halo (gratitude color) -->
+    <ellipse cx="380" cy="345" rx="40" ry="28" fill="#ffe6a7" opacity="0.15" filter="url(#b12-soft)"/>
+    <!-- body -->
+    <ellipse cx="380" cy="345" rx="14" ry="22" fill="#9bc0d4" opacity="0.85"/>
+    <ellipse cx="380" cy="325" rx="9" ry="9" fill="#9bc0d4" opacity="0.85"/>
+    <!-- internal particles -->
+    <circle cx="377" cy="320" r="0.8" fill="#ffe6a7" opacity="0.85"/>
+    <circle cx="382" cy="328" r="0.7" fill="#ffe6a7" opacity="0.8"/>
+    <circle cx="378" cy="345" r="0.9" fill="#ffe6a7" opacity="0.9"/>
+    <circle cx="383" cy="355" r="0.7" fill="#ffe6a7" opacity="0.8"/>
+    <!-- pointing arm toward Vega -->
+    <line x1="385" y1="335" x2="398" y2="100" stroke="#9bc0d4" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- family silhouettes around platform -->
+  <g fill="#0a0a0d">
+    <!-- daughter close to alien -->
+    <ellipse cx="320" cy="345" rx="12" ry="20"/>
+    <circle cx="320" cy="320" r="9"/>
+    <!-- son at telescope (right) -->
+    <ellipse cx="610" cy="335" rx="12" ry="22"/>
+    <circle cx="610" cy="308" r="9"/>
+    <!-- mother seated -->
+    <ellipse cx="270" cy="350" rx="14" ry="18"/>
+    <circle cx="270" cy="328" r="9"/>
+    <!-- father (slightly farther — ambivalence) -->
+    <ellipse cx="510" cy="350" rx="13" ry="20"/>
+    <circle cx="510" cy="325" r="9"/>
+  </g>
+</svg>
