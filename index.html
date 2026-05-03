@@ -402,9 +402,9 @@
         }
       }
 
-            /* ==== 일러스트 ==== */
+            /* ==== 일러스트 (비트 클로징 이미지) ==== */
       .beat-illustration {
-        margin: 0 calc(-1 * var(--pad)) 2rem;
+        margin: 3rem calc(-1 * var(--pad)) 0;
         border-radius: 0;
         overflow: hidden;
         position: relative;
@@ -602,15 +602,17 @@
                </figure>`
             : "";
 
+          // 일러스트는 본문 뒤(비트 끝)에 — 영화의 *클로징 이미지*로
+          // 본문 읽기 전 시각적 스포일러 방지
           section.innerHTML = `
             <header class="beat-header">
               <div class="beat-num">Beat ${beat.id}</div>
               <h2 class="beat-title">${beat.title}</h2>
             </header>
-            ${illustrationHtml}
             ${renderColumn("가족", beat.family, "col-family", beat.id)}
             ${renderColumn("외계인", beat.alien, "col-alien", beat.id)}
             ${renderColumn("추적팀", beat.team, "col-team", beat.id)}
+            ${illustrationHtml}
           `;
 
           story.appendChild(section);
