@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Beat 15 — 야산 어둠. 가족 셋과 별이가 정상 향해 오른다. 멀리 추격조 손전등.">
+  <defs>
+    <linearGradient id="b15-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1825"/>
+      <stop offset="0.5" stop-color="#1a1a2e"/>
+      <stop offset="1" stop-color="#0a0a14"/>
+    </linearGradient>
+    <radialGradient id="b15-byeori" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9bc0d4" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#7ba0b8" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#a8d4f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b15-laptop" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a8d4f5" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#a8d4f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b15-flashlight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.75"/>
+      <stop offset="0.5" stop-color="#ffe6a7" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffe6a7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="b15-soft">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#b15-sky)"/>
+
+  <!-- few faint stars -->
+  <g fill="#e8e6e1" opacity="0.4">
+    <circle cx="100" cy="60" r="0.6"/>
+    <circle cx="280" cy="40" r="0.5"/>
+    <circle cx="450" cy="70" r="0.7"/>
+    <circle cx="620" cy="50" r="0.5"/>
+    <circle cx="730" cy="80" r="0.6"/>
+    <circle cx="200" cy="120" r="0.4"/>
+    <circle cx="540" cy="110" r="0.5"/>
+  </g>
+
+  <!-- pre-dawn glow on horizon (subtle) -->
+  <ellipse cx="400" cy="200" rx="500" ry="40" fill="#3a2c50" opacity="0.4" filter="url(#b15-soft)"/>
+
+  <!-- mountain (야산) silhouette - back layer -->
+  <path d="M 0 280 Q 200 220 400 240 Q 600 260 800 220 L 800 450 L 0 450 Z" fill="#0a0d18"/>
+
+  <!-- mountain - front layer -->
+  <path d="M 0 340 Q 150 290 300 310 Q 450 330 600 295 Q 750 285 800 305 L 800 450 L 0 450 Z" fill="#08080d"/>
+
+  <!-- dirt path winding up -->
+  <path d="M 350 450 Q 380 420 400 380 Q 420 340 440 310 Q 455 285 470 270" stroke="#2a2520" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- THREE FAMILY FIGURES + alien — climbing up the dirt path -->
+  <g>
+    <!-- mother (김지은) — middle, holding son's hand -->
+    <ellipse cx="430" cy="345" rx="6" ry="11" fill="#000"/>
+    <circle cx="430" cy="332" r="4" fill="#000"/>
+
+    <!-- son (도윤) — leading, with laptop glow -->
+    <ellipse cx="445" cy="325" rx="5" ry="11" fill="#000"/>
+    <circle cx="445" cy="312" r="4" fill="#000"/>
+    <!-- laptop screen glow at his side -->
+    <ellipse cx="453" cy="333" rx="8" ry="5" fill="url(#b15-laptop)" filter="url(#b15-soft)"/>
+    <rect x="450" y="330" width="6" height="4" fill="#a8d4f5" opacity="0.85"/>
+
+    <!-- daughter (소은) — smallest, holding alien -->
+    <ellipse cx="415" cy="355" rx="5" ry="9" fill="#000"/>
+    <circle cx="415" cy="345" r="3.5" fill="#000"/>
+    <!-- alien on her chest (pale teal glow, key visual) -->
+    <ellipse cx="412" cy="358" rx="6" ry="4" fill="url(#b15-byeori)" opacity="0.9"/>
+    <circle cx="412" cy="358" r="3" fill="url(#b15-byeori)"/>
+    <!-- internal particles (faint, weakening) -->
+    <circle cx="411" cy="357" r="0.5" fill="#ffe6a7" opacity="0.7"/>
+    <circle cx="414" cy="359" r="0.4" fill="#ffe6a7" opacity="0.6"/>
+  </g>
+
+  <!-- pursuing flashlights (down the path, distant) -->
+  <g>
+    <!-- flashlight 1 -->
+    <circle cx="340" cy="430" r="14" fill="url(#b15-flashlight)" filter="url(#b15-soft)"/>
+    <circle cx="340" cy="430" r="2.5" fill="#fff"/>
+    <!-- flashlight 2 -->
+    <circle cx="295" cy="445" r="13" fill="url(#b15-flashlight)" filter="url(#b15-soft)"/>
+    <circle cx="295" cy="445" r="2" fill="#fff" opacity="0.9"/>
+    <!-- flashlight 3 (further) -->
+    <circle cx="260" cy="450" r="9" fill="url(#b15-flashlight)" opacity="0.7" filter="url(#b15-soft)"/>
+  </g>
+
+  <!-- breath mist trails behind the family -->
+  <g fill="#fff" opacity="0.06">
+    <ellipse cx="425" cy="335" rx="14" ry="3"/>
+    <ellipse cx="440" cy="318" rx="12" ry="2.5"/>
+  </g>
+
+  <!-- subtle goal marker — a faint warmer glow at the summit (uphill) -->
+  <ellipse cx="475" cy="265" rx="22" ry="10" fill="#ffe6a7" opacity="0.08" filter="url(#b15-soft)"/>
+</svg>
